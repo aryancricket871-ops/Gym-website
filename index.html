@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0d0b">
+<title>Gym Spirit | Fitness & Strength</title>
+<meta name="description" content="Explore Gym Spirit in Oshiwara, Andheri, Mumbai. Contact the team for membership, fitness facilities and training enquiries.">
+<style>
+:root{
+ --bg:#0b0d0b;--panel:#141713;--lime:#c8ff58;
+ --white:#f5f6f1;--muted:#a6aca0;--line:#30352b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.container{width:min(1150px,91%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#0b0d0bf2;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:1px}
+.mark{width:43px;height:43px;display:grid;place-items:center;background:var(--lime);color:#10140b;font-size:26px;font-weight:900;border-radius:12px}
+.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:2.5px}
+.navlinks{display:flex;gap:24px;font-size:13px;color:#d4d8cf}
+.navlinks a:hover{color:var(--lime)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 19px;border:1px solid var(--line);border-radius:7px;font-weight:800;font-size:12px;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:var(--lime);color:#10140b;border-color:var(--lime)}
+.outline{background:transparent;color:white}
+.hero{padding:76px 0 85px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.kicker{color:var(--lime);font-size:10px;font-weight:900;letter-spacing:3px;text-transform:uppercase}
+h1{font-size:clamp(46px,6.4vw,79px);line-height:.99;letter-spacing:-3px;margin:23px 0}
+h1 em{font-style:normal;color:var(--lime)}
+.intro{max-width:470px;color:var(--muted);font-size:15px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-image{height:495px;position:relative;overflow:hidden;border-radius:17px;background:#1c211a}
+.hero-image img{width:100%;height:100%;object-fit:cover}
+.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#080a08d9,transparent 55%)}
+.image-caption{position:absolute;z-index:1;bottom:22px;left:22px;right:22px}
+.image-caption span{color:var(--lime);font-size:10px;letter-spacing:2px;font-weight:bold}
+.image-caption h2{font-size:27px;line-height:1.2;margin-top:5px}
+.metrics{display:flex;gap:27px;margin-top:32px;flex-wrap:wrap}
+.metrics strong{display:block;font-size:15px}
+.metrics span{color:var(--muted);font-size:10px;letter-spacing:1px}
+section{padding:76px 0}
+.section-head{margin-bottom:30px}
+.section-head h2{font-size:clamp(32px,4.4vw,48px);line-height:1.08;letter-spacing:-1.5px;margin:12px 0}
+.section-head p{max-width:570px;font-size:14px;color:var(--muted)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{padding:26px;background:var(--panel);border:1px solid var(--line);border-radius:12px;transition:.2s}
+.card:hover{border-color:#8ab63b;transform:translateY(-3px)}
+.icon{width:45px;height:45px;border-radius:10px;background:#c8ff5815;color:var(--lime);display:grid;place-items:center;font-size:23px;margin-bottom:18px}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{font-size:13px;color:var(--muted)}
+.dark-section{background:#10130f;border-block:1px solid var(--line)}
+.gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:13px}
+.gallery img{width:100%;height:255px;object-fit:cover;border-radius:12px}
+.gallery img:first-child{height:320px}
+.note{color:var(--muted);font-size:10px;margin-top:13px}
+.memberships{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.membership{padding:25px;border:1px solid var(--line);background:var(--panel);border-radius:12px}
+.membership h3{font-size:20px;margin:13px 0 8px}
+.membership p{font-size:13px;color:var(--muted);min-height:63px}
+.membership ul{list-style:none;margin:15px 0 22px}
+.membership li{padding:8px 0;border-bottom:1px solid var(--line);font-size:12px;color:#d5d9d0}
+.membership li:before{content:"✓";color:var(--lime);margin-right:9px}
+.membership .btn{width:100%}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}
+.contact-panel{background:var(--lime);color:#11160a;padding:30px;border-radius:13px}
+.contact-panel h2{font-size:36px;line-height:1.1;margin:15px 0}
+.contact-panel p{font-size:13px}
+.detail{padding:15px 0;border-top:1px solid #19230c35;margin-top:13px;font-size:13px;overflow-wrap:anywhere}
+.form-panel{padding:27px;background:var(--panel);border:1px solid var(--line);border-radius:13px}
+.form-panel h3{font-size:23px}
+.form-panel>p{color:var(--muted);font-size:12px;margin-bottom:20px}
+.field{margin-bottom:14px}
+label{display:block;font-size:12px;margin-bottom:7px;color:#e2e5de}
+input,select,textarea{width:100%;background:#0b0e0a;color:white;border:1px solid var(--line);border-radius:7px;padding:13px;font-size:13px}
+textarea{resize:vertical;min-height:85px}
+.form-panel .btn{width:100%}
+footer{padding:28px 0;border-top:1px solid var(--line)}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+footer p{font-size:10px;color:var(--muted)}
+.credit{color:var(--lime)}
+.floating{position:fixed;bottom:17px;right:16px;z-index:15;background:var(--lime);color:#11160a;padding:13px 17px;border-radius:30px;font-size:12px;font-weight:900;box-shadow:0 6px 25px #0008}
+.approval{font-size:10px;color:#92998c;text-align:center;padding:10px;border-top:1px solid #262b22}
+@media(max-width:760px){
+ .nav{height:68px}.navlinks{display:none}.nav>.btn{padding:11px;font-size:10px}
+ .hero{padding:42px 0 54px}.hero-grid{grid-template-columns:1fr;gap:28px}
+ h1{letter-spacing:-2px}.hero-image{height:365px}
+ section{padding:55px 0}
+ .features,.memberships{grid-template-columns:1fr}
+ .gallery{grid-template-columns:1fr 1fr}
+ .gallery img,.gallery img:first-child{height:210px}
+ .contact-grid{grid-template-columns:1fr}
+}
+@media(min-width:761px) and (max-width:950px){
+ .navlinks{gap:12px}.navlinks a{font-size:11px}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="container nav">
+  <a class="brand" href="#home">
+   <span class="mark">G</span>
+   <span>GYM SPIRIT<small>STRENGTH · FITNESS · YOU</small></span>
+  </a>
+  <nav class="navlinks">
+   <a href="#about">About</a><a href="#facilities">Facilities</a>
+   <a href="#membership">Membership</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="btn primary" href="#contact">ENQUIRE NOW ↗</a>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div>
+   <div class="kicker">YOUR FITNESS. YOUR JOURNEY.</div>
+   <h1>STRONGER<br>EVERY DAY.<br><em>BETTER</em><br>EVERY REP.</h1>
+   <p class="intro">A space to focus on your fitness goals, build consistency and make every training session count. Explore the facilities and membership options at Gym Spirit.</p>
+   <div class="actions">
+    <a class="btn primary" href="#membership">EXPLORE MEMBERSHIP ↗</a>
+    <a class="btn outline" href="#facilities">DISCOVER MORE</a>
+   </div>
+   <div class="metrics">
+    <div><strong>YOUR GOALS</strong><span>YOUR PACE</span></div>
+    <div><strong>TRAIN SMART</strong><span>STAY CONSISTENT</span></div>
+    <div><strong>KEEP MOVING</strong><span>KEEP GROWING</span></div>
+   </div>
+  </div>
+  <div class="hero-image">
+   <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1100&q=85" alt="Modern gym and training equipment">
+   <div class="image-caption"><span>GYM SPIRIT · MUMBAI</span><h2>Show up. Put in the work.</h2></div>
+  </div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker">THE FITNESS EXPERIENCE</div>
+   <h2>MAKE YOUR NEXT<br>WORKOUT COUNT.</h2>
+   <p>Build a routine that works for you. Find out about training facilities, coaching options and membership availability.</p>
+  </div>
+  <div class="features" id="facilities">
+   <article class="card"><div class="icon">↗</div><h3>Strength & Training</h3><p>Explore gym facilities and training options that support your personal fitness journey.</p></article>
+   <article class="card"><div class="icon">◎</div><h3>Coaching Enquiries</h3><p>Ask the team about available coaching and guidance suited to your goals.</p></article>
+   <article class="card"><div class="icon">✳</div><h3>Membership Options</h3><p>Get information about current membership plans, timings and available facilities.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="dark-section">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker">THE TRAINING SPACE</div>
+   <h2>FOCUS. ENERGY.<br>CONSISTENCY.</h2>
+   <p>A fitness-focused visual experience designed around movement, commitment and progress.</p>
+  </div>
+  <div class="gallery">
+   <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=850&q=80" alt="Fitness training inspiration">
+   <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=700&q=80" alt="Gym equipment">
+   <img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=700&q=80" alt="Workout space">
+  </div>
+  <p class="note">The photographs shown are illustrative fitness images. Replace them with Gym Spirit's approved photos for the final publication.</p>
+ </div>
+</section>
+
+<section id="membership">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker">YOUR NEXT STEP</div>
+   <h2>FIND YOUR<br>FITNESS ROUTINE.</h2>
+   <p>Contact the team for current pricing, available plans and membership details.</p>
+  </div>
+  <div class="memberships">
+   <article class="membership">
+    <div class="kicker">01 · MEMBERSHIP</div><h3>Gym Access</h3>
+    <p>Find out about membership availability and gym access.</p>
+    <ul><li>Membership options</li><li>Current timings</li><li>Facility information</li></ul>
+    <a class="btn outline" href="#contact" data-interest="Gym Membership">ASK ABOUT MEMBERSHIP ↗</a>
+   </article>
+   <article class="membership" style="border-color:var(--lime)">
+    <div class="kicker">02 · PERSONAL GOALS</div><h3>Training Enquiry</h3>
+    <p>Ask about coaching options and available training support.</p>
+    <ul><li>Coaching availability</li><li>Training preferences</li><li>Fitness goals discussion</li></ul>
+    <a class="btn primary" href="#contact" data-interest="Personal Training">ENQUIRE NOW ↗</a>
+   </article>
+   <article class="membership">
+    <div class="kicker">03 · INFORMATION</div><h3>Visit & Explore</h3>
+    <p>Get details about facilities before planning a visit.</p>
+    <ul><li>Location information</li><li>Current fees</li><li>Visiting hours enquiry</li></ul>
+    <a class="btn outline" href="#contact" data-interest="Facilities and Timings">GET INFORMATION ↗</a>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container contact-grid">
+  <div class="contact-panel">
+   <div class="kicker" style="color:#26340e">GET IN TOUCH</div>
+   <h2>LET'S TALK<br>FITNESS.</h2>
+   <p>Contact Gym Spirit to enquire about memberships, training options and facilities.</p>
+   <div class="detail"><strong>ADDRESS</strong><br>1st Floor, Gujarati Samaj Bhavan,<br>Adarsh Nagar, New Link Road,<br>Oshiwara, Andheri, Mumbai.</div>
+   <div class="detail"><strong>PHONE</strong><br><a href="tel:+917057666677">070576 66677</a></div>
+   <div class="detail"><strong>LOCATION</strong><br><a href="https://www.google.com/maps/search/?api=1&query=Gym+Spirit+Gujarati+Samaj+Bhavan+Oshiwara+Mumbai" target="_blank" rel="noopener">View on Google Maps ↗</a></div>
+  </div>
+  <div class="form-panel">
+   <h3>Membership Enquiry</h3>
+   <p>Enter your details to prepare an enquiry message.</p>
+   <form id="enquiry">
+    <div class="field"><label for="name">Full Name</label><input id="name" required maxlength="80" placeholder="Your name"></div>
+    <div class="field"><label for="phone">Phone Number</label><input id="phone" type="tel" required maxlength="20" placeholder="Your phone number"></div>
+    <div class="field"><label for="interest">Enquiry Type</label>
+     <select id="interest"><option>Gym Membership</option><option>Personal Training</option><option>Membership Fees</option><option>Facilities and Timings</option><option>Other Enquiry</option></select>
+    </div>
+    <div class="field"><label for="message">Message</label><textarea id="message" maxlength="500" placeholder="How can the team help?"></textarea></div>
+    <button class="btn primary" type="submit">PREPARE ENQUIRY ↗</button>
+    <p class="note">This form prepares a message locally. It does not send or store your information. WhatsApp integration must be activated after the business confirms its official number.</p>
+   </form>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container footer-row">
+  <a class="brand" href="#home"><span class="mark">G</span><span>GYM SPIRIT<small>FITNESS & STRENGTH</small></span></a>
+  <p>Website concept prepared by Aryan Digital Solutions, subject to Gym Spirit's approval.</p>
+  <p class="credit">Website Design · Aryan Digital Solutions</p>
+ </div>
+</footer>
+
+<a href="#contact" class="floating">ENQUIRE NOW ↗</a>
+
+<script>
+document.querySelectorAll("[data-interest]").forEach(link=>{
+ link.addEventListener("click",()=>{
+  document.getElementById("interest").value=link.dataset.interest;
+ });
+});
+document.getElementById("enquiry").addEventListener("submit",e=>{
+ e.preventDefault();
+ const name=document.getElementById("name").value.trim();
+ const phone=document.getElementById("phone").value.trim();
+ const interest=document.getElementById("interest").value;
+ const message=document.getElementById("message").value.trim();
+ const text=`Enquiry for Gym Spirit\nName: ${name}\nPhone: ${phone}\nInterest: ${interest}\nMessage: ${message||"Please share more information."}`;
+ const box=document.createElement("textarea");
+ box.value=text;box.readOnly=true;
+ box.style.cssText="position:fixed;z-index:9999;left:8%;top:20%;width:84%;height:55%;padding:20px;background:#141713;color:white;border:2px solid #c8ff58;border-radius:12px";
+ document.body.appendChild(box);box.focus();box.select();
+ alert("Your enquiry text is ready to copy. No message has been sent.");
+ box.addEventListener("click",()=>box.remove());
+});
+</script>
+</body>
+</html>
